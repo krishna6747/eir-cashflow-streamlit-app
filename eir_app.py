@@ -1,4 +1,4 @@
-<import streamlit as st
+import streamlit as st
 import pandas as pd
 import numpy as np
 from scipy.optimize import brentq
@@ -192,4 +192,5 @@ if uploaded_file and new_balance > 0:
 
     # Download button
     csv_reporting = reporting_df.to_csv(index=False).encode("utf-8")
-    st.download_button("⬇️ Download Reporting Dates CSV", data=csv_reporting, file_name="reporting_cashflow.csv")>
+
+    st.download_button("⬇️ Download Reporting Dates CSV", data=csv_reporting, file_name="reporting_cashflow.csv")
